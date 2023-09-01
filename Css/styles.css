@@ -1,0 +1,125 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    flex-basis: calc(50% - 1rem);
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+/* Estilos para los formularios */
+form {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+form input[type="number"],
+form input[type="text"],
+form select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Estilos para los totales */
+#income-total,
+#expense-total {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Estilos para el gráfico */
+#chart {
+    margin-top: 1rem;
+}
+
+/* Estilos para las tablas de categorías */
+#category-tables {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#income-table, #expense-table {
+    width: 45%;
+    margin: 0;
+}
+
+#income-table table, #expense-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+#income-table th, #income-table td,
+#expense-table th, #expense-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#income-table th, #expense-table th {
+    background-color: #f2f2f2;
+}
+
+#income-table tr:nth-child(even),
+#expense-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#income-table tr:hover,
+#expense-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para el footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+}

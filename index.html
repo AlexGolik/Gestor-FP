@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/styles.css">
+    <title>Gestor de dinero - Presupuesto Personal</title>
+</head>
+<body>
+    <header>
+        <h1>Gestor FP</h1>
+        <p>¡Lleva un control efectivo de tus Ingresos y Gastos!</p>
+    </header>
+    <main>
+        <section id="dashboard">
+            <h2>Resumen Financiero</h2>
+            <div id="income-total">Total de Ingresos: $0</div>
+            <div id="expense-total">Total de Gastos: $0</div>
+            <canvas id="chart" width="400" height="200"></canvas>
+        </section>
+        <section id="income-table-section">
+            <h3>Ingresos</h3>
+            <table id="income-table">
+                <tr>
+                    <th>Categoría</th>
+                    <th>Valor</th>
+                </tr>
+            </table>
+        </section>
+        
+        <section id="expense-table-section">
+            <h3>Gastos</h3>
+            <table id="expense-table">
+                <tr>
+                    <th>Categoría</th>
+                    <th>Valor</th>
+                </tr>
+            </table>
+        </section>
+        
+        <button id="save-pdf-button">Guardar PDF</button>
+        <section id="income-form">
+            <h2>Ingresar Ingresos</h2>
+            <form id="income-form">
+                <label for="income-amount">Cantidad:</label>
+                <input type="number" id="income-amount" placeholder="Ingrese la cantidad" required>
+                <label for="income-category">Categoría de Ingreso:</label>
+                <select id="income-category">
+                    <option value="Salario">Salario</option>
+                    <option value="Trabajo-Freelance">Trabajo Freelance</option>
+                    <!-- Agregar más opciones según sea necesario -->
+                </select>
+                <button type="submit">Agregar Ingreso</button>
+            </form>
+            <form id="add-income-category-form">
+                <label for="new-income-category">Nueva Categoría de Ingreso:</label>
+                <input type="text" id="new-income-category" placeholder="Ingrese nueva categoría">
+                <button type="submit">Agregar Categoría de Ingreso</button>
+            </form>
+        </section>
+        <section id="expense-form">
+            <h2>Ingresar Gastos</h2>
+            <form id="expense-form">
+                <label for="expense-amount">Cantidad:</label>
+                <input type="number" id="expense-amount" placeholder="Ingrese la cantidad" required>
+                <label for="expense-category">Categoría de Gasto:</label>
+                <select id="expense-category">
+                    <option value="Alquiler">Alquiler</option>
+                    <option value="Comestibles">Comestibles</option>
+                    <!-- Agregar más opciones según sea necesario -->
+                </select>
+                <button type="submit">Agregar Gasto</button>
+            </form>
+            <form id="add-expense-category-form">
+                <label for="new-expense-category">Nueva Categoría de Gasto:</label>
+                <input type="text" id="new-expense-category" placeholder="Ingrese nueva categoría">
+                <button type="submit">Agregar Categoría de Gasto</button>
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2023 GestorFP</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Js/jspdf.umd.min.js"></script>
+    <script src="Js/app.js"></script>
+</body>
+</html>
